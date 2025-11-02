@@ -7,12 +7,12 @@
 int main(int argc, char* argv[]) {
     int* p = malloc(sizeof(int));
     assert(p != NULL);
-    printf("(%d) address of p: %08x\n", getpid(), (unsigned)p);
+    printf("(%d) address of p: %p\n", getpid(), (void*)p);
     *p = 0;
     while(1) {
         Spin(1);
         *p = *p + 1;
-        printf("(%d) address of p: %08x\n", getpid(), (unsigned)p);
+        printf("(%d) p: %d\n", getpid(), *p);
     }
     free(p);
     return 0;

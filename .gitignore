@@ -1,0 +1,14 @@
+# Standard ignores for C projects
+*.o
+*.out
+
+# Ignore backup files
+*~
+
+# Per your request, ignore files that don't have an extension (like compiled binaries).
+# This is a broad rule, so we add exceptions for directories and specific
+# important files that also lack extensions.
+*
+!*.*
+!*/
+!Makefile
